@@ -1,0 +1,10 @@
+1. Pergi ke teminal
+
+2. lakukan npm install
+    - untuk memasang semua depedencies
+
+3. lakukan npm run build
+    - untuk melakukan bundle
+
+4. lakukan npm run start-dev
+    - untuk menjalankan di server lokal
