@@ -1,4 +1,5 @@
 1. Pergi ke teminal
+   -
 
 2. lakukan npm install
     - untuk memasang semua depedencies
