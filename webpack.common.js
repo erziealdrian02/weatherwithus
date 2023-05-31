@@ -25,6 +25,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
@@ -32,18 +36,10 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "source/templates/index.html"),
     }),
-    new HtmlWebpackPlugin({
-      filename: "about.html",
-      template: path.resolve(__dirname, "source/templates/about.html"),
-    }),
-    new HtmlWebpackPlugin({
-      filename: "detail.html",
-      template: path.resolve(__dirname, "source/templates/detail.html"),
-    }),
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "source/assets"),
+          from: path.resolve(__dirname, "source/assets/"),
           to: path.resolve(__dirname, "app/assets/"),
         },
       ],
