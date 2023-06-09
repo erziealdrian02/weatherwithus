@@ -65,6 +65,8 @@ Target penggunaan aplikasi website ini adalah semua orang yang membutuhkan infor
 
 ## Dokumentasi
 
+Buka Terminal / Git Bash
+
 1. Clone Repository ini
 
 ```bash
