@@ -14,7 +14,7 @@ const DATA = [
   },
   {
     nama: "Muammar Rizal",
-    pekerjaan: "Mahasiswa | Front-End Web",
+    pekerjaan: "Software Engineer",
     image: rizal,
     github: "https://github.com/MuammarRizal31",
     instagram: "https://www.instagram.com/mmr_rizal/",
