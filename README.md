@@ -70,10 +70,20 @@ Target penggunaan aplikasi website ini adalah semua orang yang membutuhkan infor
     cd WeatherWithUs
 ```
 
-3. Jalankan dengan NPM
+3. Install Dependencies
 
 ```bash
-    npm install
-    npm run build
-    npm run start-dev
+    $ npm install
+```
+
+4. Build App Weather With Us
+
+```bash
+    $ npm run build
+```
+
+5. Jalankan Dalam mode Development di localhost
+
+```bash
+    $ npm run start-dev
 ```
