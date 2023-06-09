@@ -1,6 +1,4 @@
-<p>
-   # Aplikasi Perkiraan Cuaca (Weather With Us)
-</p>
+# Aplikasi Perkiraan Cuaca (Weather With Us)
 
 <p align="center">
    <img src="https://github.com/MuammarRizal31/weatherwithus/assets/110992271/80002151-8fbf-4d72-83d8-56d6f34b4347" alt="Logo Aplikasi" width="50%">
