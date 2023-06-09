@@ -1,6 +1,9 @@
 class AppBar extends HTMLElement {
   connectedCallback() {
     this.render();
+    setInterval(() => {
+      this.dateWeather();
+    }, 1000);
   }
 
   render() {
@@ -38,6 +41,13 @@ class AppBar extends HTMLElement {
     </div>
   </nav>
 `;
+  }
+
+  dateWeather() {
+    const waktu = new Date();
+    document.querySelector("#seconds").innerHTML = waktu.getSeconds();
+    document.querySelector("#minutes").innerHTML = waktu.getMinutes();
+    document.querySelector("#hours").innerHTML = waktu.getHours();
   }
 }
 
