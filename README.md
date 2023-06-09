@@ -73,7 +73,7 @@ Buka Terminal / Git Bash
     git clone https://github.com/erziealdrian02/weatherwithus.git
 ```
 
-2. Masukan ke Folder Web
+2. Masuk ke Folder WeatherWithUs
 
 ```bash
     cd WeatherWithUs
