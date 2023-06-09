@@ -49,8 +49,31 @@ Target penggunaan aplikasi website ini adalah semua orang yang membutuhkan infor
 
    - Discord
    - Google Meet
+   - Visual Studio Code
    - WAG (Whatsapp Grub)
    - JSONView (Chrome Extension)
    - Postman
 
 6. Repository : Github
+
+## Dokumentasi
+
+1. Clone Repository ini
+
+```bash
+    git clone https://github.com/erziealdrian02/weatherwithus.git
+```
+
+2. Masukan ke Folder Web
+
+```bash
+    cd WeatherWithUs
+```
+
+3. Jalankan dengan NPM
+
+```bash
+    npm install
+    npm run build
+    npm run start-dev
+```
