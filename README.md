@@ -91,7 +91,7 @@ Buka Terminal / Git Bash
     $ npm run build
 ```
 
-5. Jalankan Dalam mode Development di localhost
+5. Jalankan Dalam mode Development di localhost:9000
 
 ```bash
     $ npm run start-dev
