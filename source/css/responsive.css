@@ -1,245 +1,246 @@
 @media (max-width: 768px) {
-   .custom-col {
-      width: 100%;
-   }
+  .custom-col {
+    width: 100%;
+  }
 
-   .container_cuaca {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      grid-template-areas:
-         "Keterangan"
-         "Cuaca";
-      height: auto;
-   }
+  .container_cuaca {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "Keterangan"
+      "Cuaca";
+    height: auto;
+  }
 
-   .container_cuaca {
-      display: flex;
-      flex-direction: column;
-   }
+  .container_cuaca {
+    display: flex;
+    flex-direction: column;
+  }
 
-   .wrapper_slider {
-      display: block;
-   }
+  .wrapper_slider {
+    display: block;
+  }
 
-   .Keterangan {
-      padding: 20px;
-      text-align: center;
-   }
+  .Keterangan {
+    padding: 20px;
+    text-align: center;
+  }
 
-   .Cuaca {
-      margin-top: 20px;
-      text-align: center;
-      order: -1;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-   }
+  .Cuaca {
+    margin-top: 20px;
+    text-align: center;
+    order: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-   .Cuaca img {
-      width: 150px;
-      height: auto;
-   }
+  .Cuaca img {
+    width: 150px;
+    height: auto;
+  }
 
-   .Cuaca p {
-      font-size: 24px;
-      line-height: 28px;
-      margin-left: 10px;
-   }
+  .Cuaca p {
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 10px;
+  }
 
-   .Keterangan h1 {
-      font-size: 25px;
-   }
+  .Keterangan h1 {
+    font-size: 25px;
+  }
 
-   .wrapper_slider h3,
-   .wrapper_slider h4 {
-      display: none;
-   }
+  .wrapper_slider h3,
+  .wrapper_slider h4 {
+    display: none;
+  }
 
-   .container_card {
-      width: 200px;
-      right: -10px; /* Atur jarak dari sisi kanan sesuai kebutuhan */
-   }
+  .container_card {
+    width: 200px;
+    right: -10px; /* Atur jarak dari sisi kanan sesuai kebutuhan */
+  }
 
-   .tittle_section {
-      font-size: 25px;
-   }
+  .tittle_section {
+    font-size: 25px;
+  }
 
-   .row {
-      padding-left: 25px;
-   }
+  .date-dayname {
+    font-size: 20px;
+  }
 
-   .date-dayname {
-      font-size: 20px;
-   }
+  .date-day {
+    font-size: 16px;
+  }
 
-   .date-day {
-      font-size: 16px;
-   }
+  .location {
+    font-size: 14px;
+  }
 
-   .location {
-      font-size: 14px;
-   }
+  .drop-icon.feather {
+    font-size: 14px;
+  }
 
-   .drop-icon.feather {
-      font-size: 14px;
-   }
-
-   .location-icon {
-      font-size: 14px;
-   }
+  .location-icon {
+    font-size: 14px;
+  }
+  .info-side {
+    display: none;
+  }
 }
 
 @media (max-width: 1000px) {
-   .button_modal {
-      width: 100%;
-   }
+  .button_modal {
+    width: 100%;
+  }
 
-   .inputbox {
-      width: 100%;
-   }
+  .inputbox {
+    width: 100%;
+  }
 
-   .kalimat-responsive {
-      display: block;
-   }
+  .kalimat-responsive {
+    display: block;
+  }
 
-   .temp {
-      font-size: 30px;
-      top: 100px;
-   }
+  .temp {
+    font-size: 30px;
+    top: 130px;
+  }
 
-   .temp-scale {
-      height: 20%;
-      top: 130px;
-   }
+  .temp-scale {
+    height: 20%;
+    top: 130px;
+  }
 
-   .sidebar {
-      display: none;
-   }
+  .sidebar {
+    display: none;
+  }
 
-   .card {
-      width: 100%;
-      height: 175px;
-      margin-left: 0px;
-      margin-right: px;
-   }
+  .card {
+    width: 100%;
+    height: 175px;
+    margin-left: 0px;
+    margin-right: px;
+  }
 
-   .col-md-12-responsive {
-      width: 100%;
-   }
+  .col-md-12-responsive {
+    width: 100%;
+  }
 
-   .weather-side {
-      margin-left: 20px;
-      margin-right: 0px;
-   }
+  .weather-side {
+    margin-left: 20px;
+    margin-right: 0px;
+  }
 
-   .weather-gradient {
-      width: 100%;
-      height: 100%;
-   }
+  .weather-gradient {
+    width: 100%;
+    height: 100%;
+  }
 
-   .weather-side:hover {
-      -webkit-transform: none;
-      transform: none;
-   }
+  .weather-side:hover {
+    -webkit-transform: none;
+    transform: none;
+  }
 
-   .weather-icon {
-      margin-left: 90%;
-      height: 70px;
-      margin-left: 0px;
-   }
+  .weather-icon {
+    margin-left: 90%;
+    height: 70px;
+    margin-left: 0px;
+  }
 
-   .weather-desc {
-      font-size: 20px;
-   }
+  .weather-desc {
+    font-size: 20px;
+  }
 
-   .container-desc {
-      flex-direction: column;
-   }
+  .container-desc {
+    flex-direction: column;
+  }
 
-   .pinture-desc {
-      order: 1;
-      margin-right: 20%;
-   }
+  .pinture-desc {
+    order: 1;
+    margin-right: 20%;
+  }
 
-   .text-desc {
-      order: 2;
-   }
-   .weather-side {
-      width: 20%;
-   }
+  .text-desc {
+    order: 2;
+  }
+  .weather-side {
+    width: 20%;
+  }
 
-   .info-side {
-      width: 50%;
-   }
+  .info-side {
+    width: 50%;
+  }
 
-   .week-list > li {
-      height: 200px;
-   }
+  .week-list > li {
+    height: 200px;
+  }
 }
 
 @media (max-width: 1233px) {
-   .weather-side {
-      width: 90%;
-   }
+  .weather-side {
+    width: 90%;
+  }
 
-   .info-side {
-      display: none;
-   }
+  .info-side {
+    display: none;
+  }
 
-   .week-list {
-      height: 100px;
-      width: 90%;
-      /* margin-left: 150px; */
-      margin-bottom: 00px;
-   }
+  .week-list {
+    height: 100px;
+    width: 90%;
+    /* margin-left: 150px; */
+    margin-bottom: 00px;
+  }
 
-   .week-list > li {
-      width: 98px;
+  .week-list > li {
+    width: 98px;
+  }
 
-   }
+  .week-list > li:hover {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    height: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 
-   .week-list > li:hover {
-      -webkit-transform: none;
-      -ms-transform: none;
-      transform: none;
-      height: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-   }
+  .week-list > li.active {
+    height: 100px;
+  }
 
-   .week-list > li.active {
-      height: 100px;
-   }
+  .week-list > li .day-name {
+    font-size: 10px;
+  }
 
-   .week-list > li .day-name {
-      font-size: 10px;
-   }
+  .week-list > li .day-temp {
+    font-size: 10px;
+  }
 
-   .week-list > li .day-temp {
-      font-size: 10px;
-   }
+  .week-list > li .day-icon {
+    display: block;
+    height: 20px;
+    width: auto;
+    margin: 0 auto;
+  }
 
-   .week-list > li .day-icon {
-      display: block;
-      height: 20px;
-      width: auto;
-      margin: 0 auto;
-   }
+  .weather-temp {
+    font-size: 20px;
+  }
 
-   .weather-temp {
-      font-size: 20px;
-   }
-
-   .info-side_responsive {
-   }
+  .info-side_responsive {
+  }
 }
 
 @media (min-width: 1000px) {
-   .kalimat-responsive {
-      display: none;
-   }
-   .info-side_responsive{
-      display: none;
-   }
+  .kalimat-responsive {
+    display: none;
+  }
+  .info-side_responsive {
+    display: none;
+  }
+  .info-side {
+    display: none;
+  }
 }

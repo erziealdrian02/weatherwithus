@@ -1,3 +1,5 @@
+import API_ENDPOINT from "../../globals/api-endpoint";
+
 const homeWeatherTemplate = ({ id, propinsi, kota, kecamatan }) => `
 <div class="col-lg-4 col-md-6">
 <a href="/#/detail/${id}">
@@ -36,17 +38,6 @@ const detailWeatherTemplate = (weather) => `
   <i class="drop-icon" data-feather="droplet"></i>
   <span class="location">70%</span>
   <div class="location-container_box"></div>
-  <div class="info-side_responsive">
-    <div class="week-container_box">
-      <ul class="week-list">
-        <li><img src="assets/weather/227.svg" class="day-icon" alt="" /><span class="day-name">Malam</span><span class="day-temp">21°C</span></li>
-        <li><img src="assets/weather/176-179-293-299-353.svg" class="day-icon" alt="" /><span class="day-name">Pagi</span><span class="day-temp">08°C</span></li>
-        <li><img src="assets/weather/296-302.svg" class="day-icon" alt="" /><span class="day-name">Siang</span><span class="day-temp">19°C</span></li>
-        <li><img src="assets/weather/338.svg" class="day-icon" alt="" /><span class="day-name">Sore</span><span class="day-temp">22°C</span></li>
-        <div class="clear"></div>
-      </ul>
-    </div>
-  </div>
 </div>
 <div class="weather-container_box">
   <img src="assets/weather/338.svg" class="weather-icon" alt="" />
@@ -101,4 +92,24 @@ const authorTemplate = (data) => `
 </div>
 </div>`;
 
-export { homeWeatherTemplate, detailWeatherTemplate, authorTemplate };
+const detailInfoTemplate = (weather) => `
+<div class="col-lg-3 col-md-6 col-12 align-item-center we">
+  <div class="card">
+    <div class="container_card">
+      <img src="${API_ENDPOINT.IMAGE_WEATHER(weather.kodeCuaca)}" alt="" />
+    </div>
+
+    <div class="card-header">
+      <span>
+        Cuaca : ${weather.cuaca}<br />
+        Kelembapan : ${weather.humidity}%<br />
+        Temp F : ${weather.tempF}°F</span>
+      <span class="mt-4 mb-2">${weather.jamCuaca}</span>
+    </div>
+
+    <span class="temp">${weather.tempC}°C</span>
+  </div>
+</div>
+  `;
+
+export { homeWeatherTemplate, detailWeatherTemplate, authorTemplate, detailInfoTemplate };
