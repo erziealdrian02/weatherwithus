@@ -20,9 +20,9 @@ Metode prakiraan cuaca yang selama ini hanya dilakukan secara manual dengan meli
 Tujuan dari proyek adalah membangun aplikasi website untuk memperkirakan cuaca yang berguna untuk informasi mengenai cuaca terkini.
 Target penggunaan aplikasi website ini adalah semua orang yang membutuhkan informasi terbaru mengenai cuaca, Terutama masyarakat yang tinggal di daerah yang sering turun nya hujan dan pihak yang bertugas menyebar luaskan informasi mengenai cuaca terkini.
 
-## Project Resources:
+## Sumber Daya Proyek:
 
-### - Stack Technologies:
+### - Teknologi:
 
 1. Bahasa Markup :
 
