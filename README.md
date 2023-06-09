@@ -4,7 +4,7 @@
 
 ## Nama Anggota:
 
-1. F086XB173 Muhammad Erzie Aldrian Nugraha - [@MuhammadErzie](https://www.linkedin.com/in/muhamad-erzie-aldrian-nugraha-142239213/)
+1. F086XB173 - Muhammad Erzie Aldrian Nugraha - [@MuhammadErzie](https://www.linkedin.com/in/muhamad-erzie-aldrian-nugraha-142239213/)
 2. F086XB160 - Muammar Rizal - [@MuammarRizal](https://www.linkedin.com/in/muammar-rizal-492020255/)
 3. F064YB224 - Putri Regina Fauziah - [@PutriRegina](https://www.linkedin.com/in/reginapf31/)
 4. F066YB212 - Kinanthi Putri Siwilopo - [@KinanthiPutri](https://www.linkedin.com/in/kinanthi-putri-b88b9b217?trk=contact-info)
@@ -43,6 +43,7 @@ Target penggunaan aplikasi website ini adalah semua orang yang membutuhkan infor
    - NPM (Node Package Manager)
    - Eslint : airbnb
    - Bootstrap
+   - Webpack
 
 5. Tools :
 
