@@ -1,7 +1,7 @@
 import API_ENDPOINT from "../../globals/api-endpoint";
 
 const homeWeatherTemplate = ({ id, propinsi, kota, kecamatan }) => `
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-3 col-md-6">
 <a href="/#/detail/${id}">
   <div class="card">
     <div class="container_card">
@@ -9,17 +9,17 @@ const homeWeatherTemplate = ({ id, propinsi, kota, kecamatan }) => `
     </div>
 
     <div class="card-header">
-      <span
-        >${propinsi}<br />
-        ${kecamatan}<br />${kota}</span
-      >
+      <span>
+        ${propinsi}<br />
+        ${kecamatan}<br />
+        ${kota} <br />
+
+      </span>
       <span>March 13</span>
     </div>
 
-    <span class="temp">23°</span>
-
     <div class="temp-scale">
-      <span>Celcius</span>
+      <span>Lihat Detail</span>
     </div>
   </div>
 </a>

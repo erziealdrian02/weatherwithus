@@ -15,16 +15,12 @@ const HomePage = {
     const homePageApi = await WeatherWithUs.homePage();
     let weatherContainer = document.querySelector(".weather-cards");
 
-    // kalo ini orinya
-
-    // homePageApi.forEach((weather) => {
-    //   weatherContainer.innerHTML += homeWeatherTemplate(weather);
-    // });
-
-    // ini untuk sementara,karena lag banget coo laptop gua langsung ngehit 900++ api
-    for (let i = 0; i <= 10; i++) {
-      weatherContainer.innerHTML += homeWeatherTemplate(homePageApi[i]);
-    }
+    const keys = ["propinsi"];
+    const filteredData = homePageApi.filter((value, index, self) => self.findIndex((v) => keys.every((k) => v[k] === value[k])) === index);
+    filteredData.forEach((data) => {
+      if (data.propinsi === "Banten") return;
+      weatherContainer.innerHTML += homeWeatherTemplate(data);
+    });
   },
 };
 
