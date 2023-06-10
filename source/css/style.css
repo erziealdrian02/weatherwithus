@@ -338,6 +338,7 @@ body {
   font-size: 13px;
   line-height: 134.49%;
   color: var(--whitesky);
+  text-align: center;
 }
 
 /* Checkbox */
