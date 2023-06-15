@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Weather With Us" />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;1,500&display=swap" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet" type="text/css" />
+
+    <!-- icon -->
+    <link rel="icon" href="./assets/icon/logo.png" />
+
+    <title>Weather With Us</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <app-bar></app-bar>
+
+    <main-content>
+      <!-- Carousel -->
+      <hero-custom></hero-custom>
+
+      <!-- Weather -->
+      <current-weather></current-weather>
+    </main-content>
+
+    <notif>
+      <div id="footerTools">
+        <button id="subscribePushNotification" class="btn">Subscribe</button>
+        <button id="unsubscribePushNotification" class="btn">Unsubscribe</button>
+      </div>
+    </notif>
+    <!-- Footer -->
+    <weather-footer></weather-footer>
+
+    <!-- Modal -->
+    <modal-box></modal-box>
+  </body>
+</html>
