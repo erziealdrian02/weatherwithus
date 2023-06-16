@@ -17,7 +17,6 @@ const Detail = {
     detailPageApi.forEach((weather) => {
       detailInfo.innerHTML += detailInfoTemplate(weather);
     });
-    console.log(detailPageApi);
   },
 };
 

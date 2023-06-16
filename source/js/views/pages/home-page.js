@@ -1,6 +1,6 @@
 import Hero from "../../components/main-content/home-page/hero-section";
 import WeatherWithUs from "../../render-api/weather-with-us-api";
-import { homeWeatherTemplate } from "../templates/template-weather";
+import { filteredWeather, searchWeather } from "../templates/template-weather";
 
 const HomePage = {
   async render() {
@@ -14,13 +14,10 @@ const HomePage = {
   async afterRender() {
     const homePageApi = await WeatherWithUs.homePage();
     let weatherContainer = document.querySelector(".weather-cards");
+    const weatherSearchContainer = document.getElementById("weather-search");
 
-    const keys = ["propinsi"];
-    const filteredData = homePageApi.filter((value, index, self) => self.findIndex((v) => keys.every((k) => v[k] === value[k])) === index);
-    filteredData.forEach((data) => {
-      if (data.propinsi === "Banten") return;
-      weatherContainer.innerHTML += homeWeatherTemplate(data);
-    });
+    filteredWeather(homePageApi, weatherContainer);
+    searchWeather(weatherSearchContainer, homePageApi, weatherContainer);
   },
 };
 
