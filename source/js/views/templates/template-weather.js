@@ -1,7 +1,7 @@
 import API_ENDPOINT from "../../globals/api-endpoint";
 
 const homeWeatherTemplate = ({ id, propinsi, kota, kecamatan }) => `
-<div class="col-lg-3 col-md-6">
+<div class="col-lg-3 col-md-6 ${propinsi}">
 <a href="/#/detail/${id}">
   <div class="card">
     <div class="container_card">
@@ -112,4 +112,29 @@ const detailInfoTemplate = (weather) => `
 </div>
   `;
 
-export { homeWeatherTemplate, detailWeatherTemplate, authorTemplate, detailInfoTemplate };
+const filteredWeather = (api, weatherContainer) => {
+  const keys = ["propinsi"];
+  const filteredData = api.filter((value, index, self) => self.findIndex((v) => keys.every((k) => v[k] === value[k])) === index);
+  filteredData.forEach((data) => {
+    if (data.propinsi === "Banten") return;
+    weatherContainer.innerHTML += homeWeatherTemplate(data);
+  });
+};
+
+const searchWeather = (containerSearch, api, weatherContainer) => {
+  const keys = ["propinsi"];
+  const data = api.filter((value, index, self) => self.findIndex((v) => keys.every((k) => v[k] === value[k])) === index);
+  let up = "";
+
+  containerSearch.addEventListener("keyup", () => {
+    data.forEach((weather) => {
+      if (weather.propinsi.toLowerCase().includes(containerSearch.value.toLowerCase())) {
+        up += homeWeatherTemplate(weather);
+        return (weatherContainer.innerHTML = up);
+      }
+      return (up = "");
+    });
+  });
+};
+
+export { homeWeatherTemplate, detailWeatherTemplate, authorTemplate, detailInfoTemplate, filteredWeather, searchWeather };

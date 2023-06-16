@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="belajar" />
+    <script>
+      const data = [
+        {
+          nama: "Muammar Rizal",
+          umur: 22,
+        },
+        {
+          nama: "Adlian",
+          umur: 22,
+        },
+        {
+          nama: "uwan",
+          umur: 22,
+        },
+      ];
+
+      data.forEach((e) => {
+        if (e.nama.includes("li")) {
+          console.log(e);
+        }
+      });
+    </script>
+  </body>
+</html>

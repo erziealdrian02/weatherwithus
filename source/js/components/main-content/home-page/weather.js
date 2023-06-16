@@ -14,8 +14,7 @@ class Weather extends HTMLElement {
     <div class="row">
       <div class="col-md-12">
         <div class="inputbox">
-          <input required="required" type="text" />
-          <span>Search</span>
+          <input type="text" id="weather-search" placeholder="Cari cuaca Provinsi ..." />
           <i></i>
         </div>
       </div>
