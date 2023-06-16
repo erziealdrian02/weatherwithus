@@ -963,3 +963,34 @@ footer {
   opacity: 1;
   transform: translate(-50%, -130%);
 }
+.notif #footerTools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3399ff;
+  border: 1px solid #003399;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0000cc;
+}
+.btn:active {
+  background-color: #3366ff;
+}
+.btn:focus-visible {
+  outline: 3px solid #0000cc;
+}

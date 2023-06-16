@@ -87,6 +87,9 @@
   .info-side {
     display: none;
   }
+  footer #footerTools {
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 1000px) {
