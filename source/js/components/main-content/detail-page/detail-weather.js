@@ -10,4 +10,4 @@ class DetailWeather extends HTMLElement {
   }
 }
 
-customElements.define("detail-weather", DetailWeather);
+customElements.define('detail-weather', DetailWeather);

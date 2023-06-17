@@ -7,7 +7,7 @@ class AboutWeather extends HTMLElement {
     this.innerHTML = `<div class="container-desc">
     <div class="pinture-desc">
       <div class="container-desc">
-        <img src="assets/icon/logo.png" alt="Logo Weather With Us" />
+        <img class="lazyload" data-src="assets/icon/logo.png" alt="Logo Weather With Us" />
       </div>
     </div>
     <div class="text-desc">
@@ -35,4 +35,4 @@ class AboutWeather extends HTMLElement {
   }
 }
 
-customElements.define("about-weather", AboutWeather);
+customElements.define('about-weather', AboutWeather);

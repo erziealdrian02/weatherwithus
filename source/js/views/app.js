@@ -1,6 +1,7 @@
-import UrlParser from "../routes/url-parser";
-import routes from "../routes/routes";
-import NavInitiator from "../utils/nav-initiator";
+import UrlParser from '../routes/url-parser';
+import routes from '../routes/routes';
+import NavInitiator from '../utils/nav-initiator';
+
 class App {
   constructor({ content }) {
     this._content = content;

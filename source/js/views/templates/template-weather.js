@@ -1,49 +1,44 @@
-import API_ENDPOINT from "../../globals/api-endpoint";
+import API_ENDPOINT from '../../globals/api-endpoint';
 
-const homeWeatherTemplate = ({ id, propinsi, kota, kecamatan }) => `
-<div class="col-lg-3 col-md-6 ${propinsi}">
+function formatProvinceName(province) {
+  let formattedName = province.replace(/([A-Z])/g, '-$1');
+  formattedName = formattedName.toLowerCase();
+  if (formattedName.startsWith('-')) {
+    formattedName = formattedName.substring(1);
+    if (formattedName === 'd-k-i-jakarta') {
+      formattedName = 'dki-jakarta';
+    } else if (formattedName === 'd-i-yogyakarta') {
+      formattedName = 'di-yogyakarta';
+    } else if (formattedName === 'bangka-belitung') {
+      formattedName = 'kepulauan-bangka-belitung';
+    }
+  }
+  return formattedName;
+}
+
+const homeWeatherTemplate = ({
+  id, propinsi, kota, kecamatan, gambar,
+}) => `
+<div class="col-lg-3 col-md-6">
 <a href="/#/detail/${id}">
   <div class="card">
     <div class="container_card">
-      <img src="assets/weather/143.svg" alt="" />
+      <img src="${gambar}" alt="" />
     </div>
 
     <div class="card-header">
       <span>
-        ${propinsi}<br />
         ${kecamatan}<br />
-        ${kota} <br />
-
+        ${kota}<br />
       </span>
-      <span>March 13</span>
+      <span>${propinsi}</span>
     </div>
-
+    <span class="temp"></span>
     <div class="temp-scale">
       <span>Lihat Detail</span>
     </div>
   </div>
 </a>
-</div>
-`;
-
-const detailWeatherTemplate = (weather) => `
-<div class="weather-side">
-<div class="weather-gradient"></div>
-<div class="date-container_box">
-  <h2 class="date-dayname" id="dayContainer"></h2>
-  <span class="date-day" id="dateContainer"></span>
-  <i class="location-icon" data-feather="map-pin"></i>
-  <span class="location">DKIJakarta, Kota Jakarta Timur</span>
-  <br />
-  <i class="drop-icon" data-feather="droplet"></i>
-  <span class="location">70%</span>
-  <div class="location-container_box"></div>
-</div>
-<div class="weather-container_box">
-  <img src="assets/weather/338.svg" class="weather-icon" alt="" />
-  <h1 class="weather-temp">29°C</h1>
-  <h3 class="weather-desc">Sunny</h3>
-</div>
 </div>
 `;
 
@@ -113,28 +108,33 @@ const detailInfoTemplate = (weather) => `
   `;
 
 const filteredWeather = (api, weatherContainer) => {
-  const keys = ["propinsi"];
+  const keys = ['propinsi'];
   const filteredData = api.filter((value, index, self) => self.findIndex((v) => keys.every((k) => v[k] === value[k])) === index);
   filteredData.forEach((data) => {
-    if (data.propinsi === "Banten") return;
+    if (data.propinsi === 'Banten') return;
+    const formattedPropinsi = formatProvinceName(data.propinsi);
+    // eslint-disable-next-line no-param-reassign
+    data.gambar = `${API_ENDPOINT.IMAGE_PROV(formattedPropinsi)}`;
     weatherContainer.innerHTML += homeWeatherTemplate(data);
   });
 };
 
 const searchWeather = (containerSearch, api, weatherContainer) => {
-  const keys = ["propinsi"];
+  const keys = ['propinsi'];
   const data = api.filter((value, index, self) => self.findIndex((v) => keys.every((k) => v[k] === value[k])) === index);
-  let up = "";
+  let up = '';
 
-  containerSearch.addEventListener("keyup", () => {
+  containerSearch.addEventListener('keyup', () => {
     data.forEach((weather) => {
       if (weather.propinsi.toLowerCase().includes(containerSearch.value.toLowerCase())) {
         up += homeWeatherTemplate(weather);
         return (weatherContainer.innerHTML = up);
       }
-      return (up = "");
+      return (up = '');
     });
   });
 };
 
-export { homeWeatherTemplate, detailWeatherTemplate, authorTemplate, detailInfoTemplate, filteredWeather, searchWeather };
+export {
+  homeWeatherTemplate, authorTemplate, detailInfoTemplate, filteredWeather, searchWeather,
+};

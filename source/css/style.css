@@ -7,6 +7,9 @@
   --bluesky: #84c5f5;
   --whitesky: #e2effc;
   --deepwhite: #f1f8fe;
+  --deepred: #920a0a;
+  --bottomred: #d70000;
+  --bloodred: #ff0303;
   --gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
 }
 
@@ -396,7 +399,7 @@ body {
 
 /* Button */
 
-.button_submit {
+.button_subscibe {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 10px 30px;
@@ -406,34 +409,38 @@ body {
   background: var(--deepblue);
   border: none;
   color: #fff;
+  margin-right: 10px;
+  border-radius: 20px;
+  margin-left: 140px;
 }
 
-.button_submit:hover {
+.button_subscibe:hover {
   letter-spacing: 0.25em;
   background: var(--bluesky);
   color: var(--bluesky);
   box-shadow: 0 0 45px var(--bluesky);
 }
 
-.button_submit::before {
+.button_subscibe::before {
   content: "";
   position: absolute;
   inset: 2px;
   background: var(--bottomblue);
+  border-radius: 20px;
 }
 
-.button_submit span {
+.button_subscibe span {
   position: relative;
   z-index: 1;
 }
 
-.button_submit i {
+.button_subscibe i {
   position: absolute;
   inset: 0;
   display: block;
 }
 
-.button_submit i::before {
+.button_subscibe i::before {
   content: "";
   position: absolute;
   border: 2px solid var(--bluesky);
@@ -446,12 +453,12 @@ body {
   transition: 0.5s;
 }
 
-.button_submit:hover i::before {
+.button_subscibe:hover i::before {
   width: 20px;
   left: 20%;
 }
 
-.button_submit i::after {
+.button_subscibe i::after {
   content: "";
   position: absolute;
   border: 2px solid var(--bluesky);
@@ -464,7 +471,84 @@ body {
   transition: 0.5s;
 }
 
-.button_submit:hover i::after {
+.button_subscibe:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+
+.button_unsubscribe {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  transition: 0.5s;
+  position: relative;
+  font-size: 17px;
+  background: var(--deepred);
+  border: none;
+  color: #fff;
+  margin-right: 100px;
+  border-radius: 20px;
+}
+
+.button_unsubscribe:hover {
+  letter-spacing: 0.25em;
+  background: var(--bloodred);
+  color: var(--deepwhite);
+  box-shadow: 0 0 45px var(--bloodred);
+}
+
+.button_unsubscribe::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: var(--bottomred);
+  border-radius: 20px;
+}
+
+.button_unsubscribe span {
+  position: relative;
+  z-index: 1;
+}
+
+.button_unsubscribe i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.button_unsubscribe i::before {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--bloodred);
+  width: 7px;
+  height: 4px;
+  top: -3.5px;
+  left: 80%;
+  background: var(--bottomred);
+  transform: translateX(-50%);
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.button_unsubscribe:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.button_unsubscribe i::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--bloodred);
+  width: 7px;
+  height: 4px;
+  bottom: -3.5px;
+  left: 20%;
+  background: var(--bottomred);
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.button_unsubscribe:hover i::after {
   width: 20px;
   left: 80%;
 }
@@ -983,6 +1067,12 @@ footer {
 
   cursor: pointer;
   transition: 0.15s ease-in-out;
+}
+
+#footerTools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {

@@ -22,21 +22,6 @@ class Hero extends HTMLElement {
           </div>
         </div>
       </div>
-      <div class="carousel-item active">
-        <div class="container_cuaca">
-          <div class="Keterangan">
-            <div class="wrapper_slider">
-              <h3>DKIJakarta</h3>
-              <h1>Kota Jakarta Barat</h1>
-              <h4>Jakarta Barat</h4>
-            </div>
-          </div>
-          <div class="Cuaca">
-            <img src="assets/weather/116.svg" alt="" />
-            <p>32°C</p>
-          </div>
-        </div>
-      </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,4 +36,4 @@ class Hero extends HTMLElement {
   }
 }
 
-customElements.define("hero-custom", Hero);
+customElements.define('hero-custom', Hero);

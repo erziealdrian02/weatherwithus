@@ -45,10 +45,15 @@ class AppBar extends HTMLElement {
 
   dateWeather() {
     const waktu = new Date();
-    document.querySelector("#seconds").innerHTML = waktu.getSeconds();
-    document.querySelector("#minutes").innerHTML = waktu.getMinutes();
-    document.querySelector("#hours").innerHTML = waktu.getHours();
+    const hours = waktu.getHours().toString().padStart(2, '0');
+    const minutes = waktu.getMinutes().toString().padStart(2, '0');
+    const seconds = waktu.getSeconds().toString().padStart(2, '0');
+
+    // Update elemen dengan id yang sesuai
+    this.querySelector('#hours').textContent = hours;
+    this.querySelector('#minutes').textContent = minutes;
+    this.querySelector('#seconds').textContent = seconds;
   }
 }
 
-customElements.define("app-bar", AppBar);
+customElements.define('app-bar', AppBar);

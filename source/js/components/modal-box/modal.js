@@ -72,4 +72,4 @@ class Modal extends HTMLElement {
   }
 }
 
-customElements.define("modal-box", Modal);
+customElements.define('modal-box', Modal);

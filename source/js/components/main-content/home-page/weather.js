@@ -35,4 +35,4 @@ class Weather extends HTMLElement {
   }
 }
 
-customElements.define("current-weather", Weather);
+customElements.define('current-weather', Weather);
